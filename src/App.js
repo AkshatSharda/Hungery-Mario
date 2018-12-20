@@ -205,8 +205,8 @@ class App extends PureComponent {
     const { showGame, rows, columns } = this.state;
     if (showGame) {
       return (
-        <div style={styles.gameContainer}>
-          <h1>Press the arrow key to start</h1>
+        <div>
+          <h1 style={styles.title}>Press the arrow key to start</h1>
           <div style={styles.gridContainer}>
             {this.renderGrid(rows, columns)}
           </div>
@@ -219,7 +219,8 @@ class App extends PureComponent {
     return (
       <div style={styles.mainContainer}>
         <div style={styles.container}>
-          <div style={styles.topInputContainer}>
+          <h1 style={styles.title}>Hungry Mario</h1>
+          <div style={styles.inputContainer}>
             <div style={styles.inputText}>Enter number of rows</div>
             <input type="number" onChange={this.rowChange} />
           </div>
@@ -258,10 +259,8 @@ const styles = {
     margin: 16,
     display: 'flex'
   },
-  topInputContainer: {
-    marginTop: 100,
-    display: 'flex',
-    marginBottom: 16
+  title: {
+    marginTop: 70
   },
   inputText: {
     width: 250
@@ -288,7 +287,7 @@ const styles = {
   gridContainer: {
     display: 'flex',
     alignItems: 'center',
-    marginTop: 100,
+    marginTop: 16,
     flexDirection: 'column'
   },
   mushroom: {
@@ -300,9 +299,6 @@ const styles = {
     width: 30,
     position: 'absolute',
     objectFit: 'contain'
-  },
-  gameContainer: {
-    marginTop: 70
   }
 };
 
