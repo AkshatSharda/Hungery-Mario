@@ -287,7 +287,7 @@ const styles = {
   gridContainer: {
     display: 'flex',
     alignItems: 'center',
-    marginTop: 16,
+    marginTop: 40,
     flexDirection: 'column'
   },
   mushroom: {
